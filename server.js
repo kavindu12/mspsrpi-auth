@@ -44,3 +44,8 @@ app.post('/github-auth', async (req, res) => {
     res.status(500).json({ error: 'GitHub OAuth flow failed', details: error.message });
   }
 });
+
+const PORT = process.env.PORT || 8080;
+ app.listen(PORT, () => {
+   console.log(`🚀 Server listening on port ${PORT}`);
+ });
